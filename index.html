@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#090c11" />
+  <title>ONE ROUND — Hell's Last Bullet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="First person shooter game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✳</span><span>AFTER<span class="brand-light">FIRE</span></span></div>
+      <div class="level-tag"><i></i> SECTOR 09 <span>·</span> THE ASH VAULT</div>
+      <button id="sound-btn" class="sound-btn" aria-label="Toggle sound">♫ <span>SOUND ON</span></button>
+    </header>
+    <div class="crosshair" id="crosshair"><b></b><i></i></div>
+    <div class="alert" id="alert"></div>
+    <section class="hud">
+      <div class="hud-card vitals"><div class="hud-label"><span>VITALS</span><span id="health-value">100%</span></div><div class="bar"><i id="health-bar"></i></div><div class="hud-sub">MARINE // 04-117</div></div>
+      <div class="center-hud"><div class="wave">THREAT <b id="wave-number">01</b></div><div class="enemy-count"><span class="skull">✹</span><b id="enemy-count">3</b><span>HOSTILES</span></div></div>
+      <div class="hud-card ammo-card"><div class="hud-label"><span>CHAMBER</span><span class="ammo-state" id="ammo-state">LOADED</span></div><div class="bullet-display" id="bullet-display"><span class="bullet-icon">▰</span><span class="bullet-icon dim">▰</span><span class="bullet-icon dim">▰</span><span class="bullet-icon dim">▰</span><span class="bullet-icon dim">▰</span></div><div class="hud-sub" id="ammo-hint">ONE ROUND. MAKE IT COUNT.</div></div>
+    </section>
+    <div class="objective" id="objective"><span class="objective-dot"></span><span id="objective-text">CLEAR THE VAULT</span></div>
+    <div class="touch-controls" id="touch-controls">
+      <div class="dpad"><button data-move="forward" aria-label="Move forward">▲</button><div><button data-move="left" aria-label="Move left">◀</button><button data-move="back" aria-label="Move backward">▼</button><button data-move="right" aria-label="Move right">▶</button></div></div>
+      <button class="fire-touch" id="fire-touch">FIRE</button>
+    </div>
+    <div class="screen" id="start-screen">
+      <div class="screen-content">
+        <div class="eyebrow"><span></span> A ONE-ROUND NIGHTMARE <span></span></div>
+        <h1>ONE<br /><em>ROUND.</em></h1>
+        <p class="intro">The vault is crawling. Your sidearm has exactly one bullet.<br />Shoot it. Find it. Do it again.</p>
+        <button class="start-btn" id="start-btn"><span>ENTER THE VAULT</span><b>↗</b></button>
+        <div class="control-note"><span>W A S D</span> MOVE <i>·</i> <span>MOUSE</span> LOOK <i>·</i> <span>CLICK</span> FIRE</div>
+      </div>
+      <div class="screen-side">NO BACKUP. NO SPARE AMMO.<br /><b>DON'T LOSE THE ROUND.</b></div>
+    </div>
+    <div class="screen hidden" id="end-screen">
+      <div class="screen-content"><div class="eyebrow"><span></span> <b id="end-kicker">SIGNAL LOST</b> <span></span></div><h2 id="end-title">YOU'RE<br /><em>DONE.</em></h2><p class="intro" id="end-copy">The vault keeps what it takes.</p><button class="start-btn" id="restart-btn"><span>RUN IT BACK</span><b>↻</b></button></div>
+    </div>
+    <footer><span>AFTERFIRE INDUSTRIES</span><span>KEEP YOUR ROUND CLOSE <b>✳</b></span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
